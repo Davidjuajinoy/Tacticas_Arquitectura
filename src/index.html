@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tácticas De Arquitectura</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="row-100" id="inicio">
+            <!-- ! Nav bar -->
+            
+              <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top px-3 ">
+                <div class="container-fluid">
+                    <a href="#inicio"><img src="assets/img/logo.png" class="img-fluid img_nav" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+              
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tacticas">Tácticas</a>
+                    </li>
+                  
+
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contactanos">Contactanos</a>
+                      </li>
+                   
+
+                  </ul>
+               
+                </div>
+                </div>
+              </nav>
+            
+              <div class="container-fluid h-100 ">
+                  <div class="row mx-3 h-100">
+                      <div class="col-md-4 col-sm-12 align-self-center mt-5">
+                        <div class="titulo">
+                            <div class="h1">Tácticas De Arquitectura</div>
+                            <p class="text-muted">¿Quieres conocer las tácticas de arquitectura más implementadas en el mundo del desarrollo de software, incluyendo los estímulos más importantes de cada táctica y los resultados de dicho estimulo?</p>
+                            <a href="#tacticas" class="btn btn-custom rounded">Leer más</a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-8 col-sm-12 mt-5  align-self-center">
+                        <img src="assets/img/banner.svg" class="img-fluid img-size"  alt="">
+                    </div>
+                  </div>
+              </div>
+            <!-- ! Nav bar -->
+        </header>
+
+        <main class="bg-light ">
+            <div class="container pt-3" id="atributos">
+                <div class="titulo_main">
+                    <p class="h1 mt-5">¿Qué son los atributos de calidad?</p>
+                </div>
+                <div class="p_main mb-5">
+                    <p class=" text-muted col-md-5 col-sm-12">Un atributo de calidad es una propiedad medible de un sistema, que indica qué tan bien el sistema satisface las necesidades de las partes interesadas.</p>
+                </div>
+
+                <!-- ! Atributos de calidad -->
+                <section class="  mt-3">
+                    <div class="row mb-5">
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/availability.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4 align-content-center">Disponibilidad</p>
+                            </div>
+                            <p class="text-muted ">Es Propiedad de software que esta lista para llevar 
+                                a cabo su tarea cuando se requiera. Busca minimizar el tiempo de interrupción del 
+                                servicio mitigando fallas.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/performance.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4">Rendimiento</p>
+                            </div>
+                            <p class="text-muted">Se trata del intervalo del tiempo entre una acción requerida y está vinculado a la escalabilidad, es decir, aumenta la capacidad de trabajo de su sistema, mientras sigue teniendo un buen desempeño. </p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/interoperabilida.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4">Interoperabilidad</p>
+                            </div>
+                            <p class="text-muted">Se trata de intercambiar información entre 2 sistemas o más por medio de Rest(api), soat(XML),etc.</p>
+                            <p class="text-muted">También se refiere a la forma de interpretar los datos correctamente</p>  
+                        </div>
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/modify.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4 align-content-center">Modificabilidad</p>
+                            </div>
+                            <p class="text-muted ">Es el cambio del sistema y hay que tener en cuenta el costo, el riesgo para realizar cambios.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/Testabilida.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4">Testeabilidad</p>
+                            </div>
+                            <p class="text-muted">Es la facilidad de hacer pruebas en un sistema con la que se puede descubrir fallas y mejorar la arquitectura.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/security.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4">Seguridad</p>
+                            </div>
+                            <p class="text-muted">Capacidad de un sistema de proteger los datos de accesos no autorizados, los ataques pueden ser (confiabilidad, integridad, disponibilidad, confidencialidad). 
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm-12 col-md-4 px-5">
+                           
+                        </div>
+
+                        <div class="col-sm-12 col-md-4 px-5">
+                            <div class="d-flex flex-column align-items-center ">
+                                <img src="assets/img/usability.svg" class="img-fluid " alt="">
+                                <p class="h4 mt-4 align-content-center">Usabilidad:</p>
+                            </div>
+                            <p class="text-muted ">Facilidad con la que un usuario puede hacer tareas en un sistema (manejo de errores y como los ve el usuario y que no le toque hacer nada al usuario) Tiene relación con la modificabilidad (probar y cambiar interfaz).</p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4 px-5">
+                           
+                        </div>
+                    </div>
+
+               
+                </section>
+                <!-- ! Atributos de calidad -->
+
+
+
+                
+            </div>
+        </main>
+
+
+        <section class="container">
+            <div class="titulo_main pt-3" id="tacticas">
+                <p class="h1 mt-5">Tácticas De Arquitectura</p>
+            </div>
+           
+                  <!-- ! Tacticas -->
+                  <nav class="mt-5">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button class="nav-link active" id="nav-disponibilidad-tab" data-bs-toggle="tab" data-bs-target="#nav-disponibilidad" type="button" role="tab" aria-controls="nav-disponibilidad" aria-selected="true">Disponibilidad</button>
+                      <button class="nav-link" id="nav-rendimiento-tab" data-bs-toggle="tab" data-bs-target="#nav-rendimiento" type="button" role="tab" aria-controls="nav-rendimiento" aria-selected="false">Rendimiento</button>
+                      <button class="nav-link" id="nav-interoperabilidad-tab" data-bs-toggle="tab" data-bs-target="#nav-interoperabilidad" type="button" role="tab" aria-controls="nav-interoperabilidad" aria-selected="false">Interoperabilidad</button>
+                      <button class="nav-link" id="nav-modificabilidad-tab" data-bs-toggle="tab" data-bs-target="#nav-modificabilidad" type="button" role="tab" aria-controls="nav-modificabilidad" aria-selected="true">Modificabilidad</button>
+                      <button class="nav-link" id="nav-testeabilidad-tab" data-bs-toggle="tab" data-bs-target="#nav-testeabilidad" type="button" role="tab" aria-controls="nav-testeabilidad" aria-selected="false">Testeabilidad</button>
+                      <button class="nav-link" id="nav-seguridad-tab" data-bs-toggle="tab" data-bs-target="#nav-seguridad" type="button" role="tab" aria-controls="nav-seguridad" aria-selected="false">Seguridad</button>
+                      <button class="nav-link" id="nav-seguridad-tab" data-bs-toggle="tab" data-bs-target="#nav-usabilidad" type="button" role="tab" aria-controls="nav-usabilidad" aria-selected="false">Usabilidad</button>
+                    </div>
+                  </nav>
+
+                  <!-- !tabs Content -->
+                  <div class="tab-content mt-5" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-disponibilidad" role="tabpanel" aria-labelledby="nav-disponibilidad-tab">
+                        <ul>
+                            <li class="h5">Detección de fallas: <span class="h6 ">Ping, monitor, heartbeat, marca de tiempo, comprobación de estado, monitoreo de la condición, votacion, replicacion, redundancia funcional, redundancia analítica, deteccion de excepciones </span></li>
+                            <li class="h5">Recuperarse de fallas:<span class="h6 ">redundancia activa, redundancia pasiva, repuesto, manejo de excepciones, retroceso, actualizacion de software, reintentar, ignorar comportamiento defectuoso </span> </li>
+                            <li class="h5">Prevención de fallas: <span class="h6 ">retiro del servicio ,transacciones, modelo predictivo </span></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="nav-rendimiento" role="tabpanel" aria-labelledby="nav-rendimiento-tab">
+                        <ul>
+                            <li class="h5">Acoplamiento: <span class="h6 "></span> </li>
+                            <li class="h5">Cohesión:  <span class="h6 "></span> </li>
+                           
+                        </ul>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-interoperabilidad" role="tabpanel" aria-labelledby="nav-interoperabilidad-tab">
+                        <ul>
+                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
+                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-modificabilidad" role="tabpanel" aria-labelledby="nav-modificabilidad-tab">
+                        <ul>
+                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
+                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-testeabilidad" role="tabpanel" aria-labelledby="nav-testeabilidad-tab">
+                        <ul>
+                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
+                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                           
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-seguridad" role="tabpanel" aria-labelledby="nav-seguridad-tab">
+                        <ul>
+                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
+                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                           
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-usabilidad" role="tabpanel" aria-labelledby="nav-usabilidad-tab">
+                        <ul>
+                            <li class="h5">Usabilidad: <span class="h6 ">Descubrir el servicio</span> </li>
+                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                           
+                        </ul>
+                    </div>
+
+                  </div>
+                  <!-- !End tabs Content -->
+
+                  <!-- <section class="mt-5">
+                    <div class="row mb-5">
+                        <div class="col-sm-12 col-md-3 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/availability.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4 align-content-center">Disponibilidad</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-md-6 px-5">
+                            <ul>
+                                <li class="h5">Detección de fallas: <span class="h6 ">Ping, monitor, heartbeat, marca de tiempo, comprobación de estado, monitoreo de la condición, votacion, replicacion, redundancia funcional, redundancia analítica, deteccion de excepciones </span></li>
+                                <li class="h5">Recuperarse de fallas:<span class="h6 ">redundancia activa, redundancia pasiva, repuesto, manejo de excepciones, retroceso, actualizacion de software, reintentar, ignorar comportamiento defectuoso </span> </li>
+                                <li class="h5">Prevención de fallas: <span class="h6 ">retiro del servicio ,transacciones, modelo predictivo </span></li>
+                                
+                            </ul>
+                        
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="row mb-5">
+                        <div class="col-sm-12 col-md-3 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/interoperabilida.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4 align-content-center">Interoperabilidad</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-md-7 px-5">
+                            <ul>
+                                <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
+                                <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                               
+                            </ul>
+                          
+                        </div>
+                        
+                    </div>
+
+
+                    
+                    <div class="row mb-5">
+                        <div class="col-sm-12 col-md-3 px-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/performance.svg" class="img-fluid" alt="">
+                                <p class="h4 mt-4 align-content-center">Rendimiento</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-md-7 px-5">
+                            <ul>
+                                <li class="h5">Acoplamiento: <span class="h6 "></span> </li>
+                                <li class="h5">Cohesión:  <span class="h6 "></span> </li>
+                               
+                            </ul>
+                            <p class="text-muted"></p>
+                        </div>
+                        
+                    </div>
+
+
+
+                   
+
+               
+                </section> -->
+                <!-- ! Tacticas -->
+        </section>
+
+
+
+        <footer class="container-fluid mt-5 bg-light">
+            <div class=" container mx-auto text-center text-md-left row m-0 p-0 ">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-5   ">
+                    <ul class="list-unstyled">
+                        <li class="d-flex flex-column  justify-content-center  ">
+                            <h4 class="font-weight-bold" >HighLights</h4 >
+                            <a href="" class="d-block text-decoration-none text-dark">Nuestra Historia</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Precios</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Contactenos</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Trabajos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-5 ">
+                    <ul class="list-unstyled">
+                        <li class="d-flex flex-column  justify-content-center  ">
+                            <h4 class="font-weight-bold">Recursos</h4>
+                            <a href="" class="d-block text-decoration-none text-dark">Preguntas Frecuentes</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Blog</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Soporte</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12  mt-5 ">
+                    <ul class="list-unstyled">
+                        <li class="d-flex flex-column  justify-content-center  ">
+                            <h4 class="font-weight-bold">Legal</h4>
+                            <a href="" class="d-block text-decoration-none text-dark">Privacidad</a>
+                            <a href="" class="d-block text-decoration-none text-dark">Terminos de Servicio </a>
+                            <a href="" class="d-block text-decoration-none text-dark">Seguridad</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="  col-lg-3 col-md-3 col-sm-6 col-12  mt-5 ">
+                    <ul class="list-unstyled social-list ">
+
+                        <h4 class="font-weight-bold">Información</h4>
+         
+
+                        <li>Consultora de software de España</li>
+                        <li>Cra. 113b ##152b-37</li>
+                        <li>Madrid</li>
+                        <li>+57 350 3883950</li>
+                        <li><a href="">consulsfotesp@consulsfotesp.com</a></li>
+                    </ul>
+                </div>
+
+                <p class="mt-5">CopyRight &copy 2020 David Juajinoy :D. All rights Reserved </p>
+
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
