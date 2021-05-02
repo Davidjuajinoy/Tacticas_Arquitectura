@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                        <a class="nav-link" href="#atributos">Atributos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#tacticas">Tácticas</a>
@@ -283,7 +283,7 @@
                             <li class="fs-5 fw-bold lista_tacticas">Control de la demanda de recursos: <p class="fs-6 fw-normal d-inline">Es administrar cuidadosamente la demanda de recursos. Esto se puede hacer reduciendo el número de eventos procesados aplicando una tasa de muestreo o limitando la velocidad a la que el sistema responde a los eventos. Las tácticas que se incluyen en esta categoría son  <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> gestionar frecuencia de muestreo, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> limitar la respuesta al evento, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> priorizar eventos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  reducir los gastos generales, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> tiempos de ejecución, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar la eficiencia</a>.</p></li>
 
 
-                            <li class="fs-5 fw-bold lista_tacticas">Administrar recursos: <p class="fs-6 fw-normal d-inline">Es cuando recurso puede ser cambiado por otro por ejemplo los datos intermedios se pueden mantener en un caché o se pueden regenerar dependiendo de la disponibilidad de recursos de tiempo y espacio. Las tácticas que se incluyen en esta categoría son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar los recursos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> introducir la concurrencia, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de cómputos, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de datos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  tamaños de cola enlazados, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> programas recursos,</a></p></li>
+                            <li class="fs-5 fw-bold lista_tacticas">Administrar recursos: <p class="fs-6 fw-normal d-inline">Es cuando recurso puede ser cambiado por otro por ejemplo los datos intermedios se pueden mantener en un caché o se pueden regenerar dependiendo de la disponibilidad de recursos de tiempo y espacio. Las tácticas que se incluyen en esta categoría son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar los recursos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> introducir la concurrencia, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de cómputos, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de datos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  tamaños de cola enlazados, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> programar recursos</a>.</p></li>
 
                         </ul>
 
@@ -375,7 +375,7 @@
                         <p>Para entender bien las tácticas hay que saber dos conceptos claves que son:</p>
                         <p class="fs-6  fw-bold d-inline">Acoplamiento: <p class="fs-6 text-muted d-inline">Se refiere a la complejidad de la relación que existen en las clases se clasifica en un sistema estrechamente acoplado y en una complejidad débil.</p></p>
                         <p class="fs-6  fw-bold d-inline">Cohesión: <p class="fs-6 text-muted d-inline">Se refiere a un al nivel de coherencia que existe entre los distintos miembros de una clase, se clasifica en alta y baja.</p></p>
-                        <p>Las tácticas e clasifican en:</p>
+                        <p>Las tácticas se clasifican en:</p>
 
                         <ul class="">
                             <li class="fs-5 fw-bold lista_tacticas">Reducir el tamaño de un módulo: <p class="fs-6 fw-normal d-inline">En esta categoría se encuentra <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> Split módulo</a>.</p></li>
@@ -389,6 +389,7 @@
                             <li class="fs-5 fw-bold lista_tacticas">Aplazamiento de Encuadernación: <p class="fs-6 fw-normal d-inline">Se encarga de diseñar flexibilidad, en esta táctica se encuentran las tácticas para <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> vincular valores en tiempo de compilación o tiempo de construcción </a>y <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> las tácticas para vincular valores en tiempo de ejecución</a>.</p></li>
 
                         </ul>
+                    
 
                     </div>
                     </div>
@@ -582,7 +583,125 @@
                 <!-- ! Tacticas -->
         </section>
 
+        <section class="contact bg-light" id="contactanos" >
+            <div class="container py-5 ">
+            	    <h2 class="text-center h1 fw-bold">Formulario de Contacto</h2>
+            
+            	    <form  id="form_contact" class="my-5" >
+            	          <div class="form-group row m-3">
+            	             <div class="col-12 col-md-6">
+            	                <label for="nombre_contact" class="ml-2" >Nombre</label>
+            	                <input type="text" class="form-control" placeholder="pepito.">
+            	            </div>
+            	          
+              
+            	             <div class="col-12 col-md-6">
+            	                <label for="apellido_contact" class="ml-2" >Apellido</label>
+            	                <input type="text"  class="form-control" placeholder="Gonzales...">
+            	            </div>
+              
+            	          </div>
+              
+            	            <div class="form-group row m-3">
+              
+            	              <div class="col-12 col-md-6">
+            	                <label for="email_contact" >Correo</label>
+            	                <input type="text" class="form-control" placeholder="pepitoMan@example.com.-.">
+            	              </div>
+              
+            	              <div class="col-12 col-md-6">
+            	                <label for="asunto_contact" >Asunto</label>
+            	                <input type="text" class="form-control" placeholder="Escriba su asunto ..">
+            	              </div>
+            	               
+            	            </div>
+              
+            	            <div class="form-group row m-3">
+            	              <div class="col-12  col-md-6">
+            	                 <label for="message_contact"  >Mensaje</label>
+            	                  <textarea class="form-control form_contact_textarea"></textarea>
+            	              </div>
+            	                <div class="col-5 m-3">
+            	                    <label for="">Sexo</label>
+            	                      <div class="form-check">
+            	                        <div class="form-check-label ">
+            	                         <input class="form-check-input" value="hombre" name="genero_contact"  type="radio">Hombre
+            	                        </div>
+            	                      </div>
+            	                      <div class="form-check">
+            	                        <label class="form-check-label ">
+            	                          <input class="form-check-input " value="mujer" name="genero_contact" type="radio">Mujer
+            	                        </div>        
+            	               </div>
+            	             </div>
+              
+            	              <div class="form-group row">
+            	                <div class="col-12 text-center">
+            	                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+            	                        <input type="checkbox" class="custom-control-input" name="terminos_contact"  value="atc" id="terminos_contact">
+            	                        <label class="custom-control-label" for="terminos_contact">Acepto Terminos y Condiciones</label>
+            	                    </div>
+            	                 </div>
+            	                    
+            	              </div>
+            	              <div class="row justify-content-center">
+            	                <div class="col-4 ">
+            	                    
+            	                    <label for="form_contacto" class="font-weight-bold w-100 p-2  btn-custom text-center">Enviar</label>
+            	                    <input type="submit"  id="form_contacto" class="input-login d-none">
+              
+            	               </div>
+            	             </div>
+              
+              
+              
+              
+            	    </form>
+            	  </div>
+        </section>
+    
+                  <!-- ? Ubicacion-->
 
+
+                  <div class="container-fluid my-5  px-5 " >
+                      <p class="h1 text-center fw-bold">Ubicacion</p>
+                    <div class="container py-5 ">
+                        <div class="card border-0 mb-8" >
+                            <div class="row  ">
+                                <div class="col-md-8 ">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97168.97116503165!2d-3.751301879805887!3d40.441397318763464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e23705d39f%3A0xa8fff6d26e2b1988!2sEstadio%20Santiago%20Bernab%C3%A9u!5e0!3m2!1ses!2sco!4v1619937444435!5m2!1ses!2sco" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" class="card-img"></iframe>
+                                </div>
+        
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-weight-bold  text-center h2 ">Ubicación</h5>
+                                        <p class="card-text"> 
+                                        <ul class=" list-unstyled d-flex justify-content-center flex-column align-items-center"  >
+                                        <li class="font-weight-bold ">Dirección</li>
+                                        <li>Av. de Concha Espina </li>
+                                        <li>Madrid, España</li>
+                                        <li class="font-weight-bold ">Teléfono</li>
+                                        <li>+57 316 3883950</li>
+                                        <li class="font-weight-bold  mt-3">Horario de Atencion</li>
+                                        <li>lun.: 7:00–17:00</li>
+                                        <li>mar.: 7:00–17:00</li>
+                                        <li>mié.: 7:00–17:00</li>
+                                        <li>jue.: 7:00–17:00</li>
+                                        <li>vie.: 7:00–17:00</li>
+                                        <li>sáb.: 8:00–14:00</li>
+                                        <li>dom.: Cerrado</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+      
+            <!-- ? End Ubicacion-->
+      
 
         <footer class="container-fluid mt-5 bg-light">
             <div class=" container mx-auto text-center text-md-left row m-0 p-0 ">
@@ -629,7 +748,7 @@
          
 
                         <li>Consultora de software de España</li>
-                        <li>Cra. 113b ##152b-37</li>
+                        <li>Av. de Concha Espina</li>
                         <li>Madrid</li>
                         <li>+57 350 3883950</li>
                         <li><a href="">consulsfotesp@consulsfotesp.com</a></li>

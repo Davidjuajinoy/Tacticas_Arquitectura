@@ -363,6 +363,395 @@ let tactica = document
                                             `;
           break;
 
+        case `gestionar frecuencia de muestreo,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Gestionar Frecuencia De Muestreo: </p>
+                                              <p class="d-inline">
+                                              Si es posible reducir la frecuencia de muestreo a la que se captura un flujo de datos ambientales, entonces se puede reducir la demanda, generalmente con alguna pérdida de fidelidad. </p> 
+                                              <p>
+                                              Esto es común en los sistemas de procesamiento de señales donde, por ejemplo, se pueden elegir diferentes códecs con diferentes tasas de muestreo y formatos de datos. Esta elección de diseño se realiza para mantener niveles predecibles de latencia; debe decidir si tener una fidelidad más baja pero un flujo de datos consistente es preferible a perder paquetes de datos.
+                                              </p>
+                                              `;
+          break;
+
+        case `limitar la respuesta al evento,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Limitar La Respuesta Al Evento: </p>
+                                              <p class="d-inline">
+                                              Usando los eventos discretos llegan al sistema (o elemento) demasiado rápido para ser procesados, entonces los eventos deben ponerse en cola hasta que puedan procesarse. Debido a que estos eventos son discretos, normalmente no es deseable "submuestrearlos".
+                                              </p>
+
+                                              <p>
+                                              En tal caso, puede elegir procesar eventos solo hasta una tasa máxima establecida, asegurando así un procesamiento más predecible cuando los eventos se procesan realmente. Esta táctica podría ser activada por un tamaño de cola o una medida de utilización del procesador que exceda algún nivel de advertencia. Si adopta esta táctica y no es aceptable perder ningún evento, debe asegurarse de que sus colas sean lo suficientemente grandes como para manejar el peor de los casos. Si, por otro lado, elige eliminar eventos, debe elegir una política para manejar esta situación: ¿Registra los eventos eliminados o simplemente los ignora? ¿Notifica a otros sistemas, usuarios.
+                                              </p>
+                                              `;
+          break;
+
+        case `priorizar eventos,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Priorizar Eventos: </p>
+                                                  <p class="d-inline">
+                                                  Si no todos los eventos son igual de importantes, puede imponer un esquema de prioridad que clasifique los eventos de acuerdo con lo importante que es atenderlos. Si no hay suficientes recursos disponibles para atenderlos cuando surjan, los eventos de baja prioridad pueden ignorarse. 
+                                                  </p>
+    
+                                                  <p>
+                                                  Ignorar eventos consume recursos mínimos (incluido el tiempo) y, por lo tanto, aumenta el rendimiento en comparación con un sistema que atiende todos los eventos todo el tiempo. Por ejemplo, un edificio.El sistema de gestión puede elevar una variedad de alarmas. Las alarmas que amenazan la vida, como las alarmas contra incendios, deben recibir mayor prioridad que las alarmas informativas, ya que una habitación está demasiado fría.
+                                                  </p>
+                                                  `;
+          break;
+
+        case `reducir los gastos generales,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Reducir Los Gastos Generales: </p>
+                                                      <p class="d-inline">
+                                                      El uso de intermediarios (tan importante para la modificabilidad, aumenta los recursos consumidos en el procesamiento de un flujo de eventos, y así eliminarlos mejora la latencia. Este es un clásico intercambio de modificabilidad / rendimiento.
+                                                        </p>
+                                                        <p>
+                                                        La separación de las preocupaciones, otra pieza clave de la modificabilidad, también puede aumentar la sobrecarga de procesamiento necesaria para dar servicio a un evento si conduce a que un evento sea atendido por una cadena de componentes en lugar de un solo componente. Los costos de conmutación de contexto y de comunicación entre componentes se suman, especialmente cuando los componentes están en nodos diferentes en una red. Una estrategia para reducir la sobrecarga computacional es la ubicación conjunta de recursos.
+                                                        
+                                                        </p>
+
+        
+                                                      <p>
+                                                      La ubicación conjunta puede significar alojar componentes que cooperan en el mismo procesador para evitar el retraso de la comunicación de la red; puede significar colocar los recursos en el mismo componente de software de tiempo de ejecución para evitar incluso el gasto de una llamada de subrutina. Un caso especial de reducción de la sobrecarga computacional es realizar una limpieza periódica de los recursos que se han vuelto ineficientes. Por ejemplo, las tablas hash y los mapas de memoria virtual pueden requerir el recálculo y la reinicialización. Otra estrategia común es ejecutar servidores de un solo hilo (para simplificar y evitar la contención) y dividir la carga de trabajo entre ellos.
+                                                      </p>
+                                                      `;
+          break;
+
+        case `tiempos de ejecución,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Tiempos De Ejecución: </p>
+                <p class="d-inline">
+                Ponga un límite en cuánto tiempo de ejecución se utiliza para responder a un evento. 
+                </p>
+                <p>
+                Para algoritmos iterativos, dependientes de los datos, limitar el número de iteraciones es un método para limitar los tiempos de ejecución. El costo suele ser un cálculo menos preciso. Si adopta esta táctica, deberá evaluar su efecto en la precisión y ver si el resultado es "lo suficientemente bueno".
+                </p>
+
+
+                <p>
+                Esta táctica de administración de recursos frecuentemente se combina con la táctica de administración de tasa de muestreo.
+                </p>
+                `;
+          break;
+
+        case `aumentar la eficiencia`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Aumentar La Eficiencia De Los Recursos: </p>
+                  <p class="d-inline">
+                   Si se Mejora los algoritmos utilizados en áreas críticas disminuirá la latencia.
+                  </p>
+             
+                  `;
+          break;
+
+        case `aumentar los recursos,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Aumentar Los Recursos: </p>
+                      <p class="d-inline">
+                      Los procesadores más rápidos, los procesadores adicionales, la memoria adicional y las redes más rápidas tienen el potencial de reducir la latencia.
+     
+                      </p>
+                      <p>
+                      El costo generalmente es una consideración en la elección de recursos, pero aumentar los recursos es definitivamente una táctica para reducir la latencia y, en muchos casos, es la forma más económica de obtener una mejora inmediata.
+                      </p>
+                      `;
+          break;
+
+        case `introducir la concurrencia,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Introducir La Concurrencia: </p>
+                          <p class="d-inline">
+                          Si las solicitudes se pueden procesar en paralelo, se puede reducir el tiempo bloqueado. Se puede introducir la concurrencia al procesar diferentes flujos de eventos en diferentes subprocesos o al crear subprocesos adicionales para procesar diferentes conjuntos de actividades.
+         
+                          </p>
+            
+                          <p>
+                          Una vez que se ha introducido la concurrencia, se pueden usar políticas de programación para lograr los objetivos que considere deseables. Las diferentes políticas de programación pueden maximizar la imparcialidad (todas las solicitudes obtienen el mismo tiempo), el rendimiento (el tiempo más corto para finalizar primero) u otros objetivos. (Vea la barra lateral.)
+                          </p>
+                          `;
+          break;
+
+        case `mantener múltiples copias de cómputos,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Mantener Múltiples Copias De Cómputos: </p>
+                              <p class="d-inline">
+                              Varios servidores en un patrón cliente-servidor son réplicas de cómputo. 
+             
+                              </p>
+                
+                              <p>
+                              El propósito de las réplicas es reducir la contención que se produciría si todos los cálculos tuvieran lugar en un solo servidor. Un equilibrador de carga es una pieza de software que asigna nuevo trabajo a uno de los servidores duplicados disponibles; los criterios para la asignación varían, pero pueden ser tan simples como el turno redondo o la asignación de la siguiente solicitud al servidor menos ocupado.
+                              </p>
+                              `;
+          break;
+
+        case `mantener múltiples copias de datos,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Mantener Múltiples Copias De Datos: </p>
+                                <p class="d-inline">
+                                El almacenamiento en caché es una táctica que implica mantener copias de datos (posiblemente uno un subconjunto del otro) en el almacenamiento con diferentes velocidades de acceso. Las diferentes velocidades de acceso pueden ser inherentes (memoria versus almacenamiento secundario) o pueden deberse a la necesidad de comunicación de la red.
+               
+                                </p>
+                  
+                                <p>
+                                Replicación de datos implica mantener copias separadas de los datos para reducir la contención de múltiples accesos simultáneos. Debido a que los datos que se almacenan en caché o replican generalmente son una copia de los datos existentes, mantener las copias consistentes y sincronizadas se convierte en una responsabilidad que el sistema debe asumir. Otra responsabilidad es elegir los datos a almacenar en caché. Algunos cachés operan simplemente conservando copias de lo que se solicitó recientemente, pero también es posible predecir las solicitudes futuras de los usuarios según los patrones de comportamiento, y comenzar los cálculos o las consultas previas necesarias para cumplir con esas solicitudes antes de que el usuario las haya realizado.
+                                </p>
+                                `;
+          break;
+
+        case `tamaños de cola enlazados,`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Tamaños De Cola Enlazados: </p>
+                                <p class="d-inline">
+                                Esto controla el número máximo de llegadas en cola y, en consecuencia, los recursos utilizados para procesar las llegadas.
+               
+                                </p>
+                  
+                                <p>
+                                Si adopta esta táctica, debe adoptar una política para lo que sucede cuando se desbordan las colas y decidir si no es aceptable no responder a los eventos perdidos. Esta táctica se empareja con frecuencia con la táctica de respuesta de evento límite.
+                                </p>
+                                `;
+          break;
+
+        case `programar recursos`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Programar Recursos: </p>
+                                    <p class="d-inline">
+                                   Siempre que haya una disputa por un recurso, el recurso debe ser programado. Los procesadores están programados, los almacenamientos intermedios están programados y las redes programadas.
+                   
+                                    </p>
+                      
+                                    <p>
+                                    Su objetivo es comprender las características del uso de cada recurso y elegir la estrategia de programación que sea compatible con él. (Vea la barra lateral.)
+                                    </p>
+                                    `;
+          break;
+
+        case `programar recursos`:
+          titulo_modal.textContent = "Tácticas De Rendimiento";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Programar Recursos: </p>
+                                        <p class="d-inline">
+                                       Siempre que haya una disputa por un recurso, el recurso debe ser programado. Los procesadores están programados, los almacenamientos intermedios están programados y las redes programadas.
+                       
+                                        </p>
+                          
+                                        <p>
+                                        Su objetivo es comprender las características del uso de cada recurso y elegir la estrategia de programación que sea compatible con él. (Vea la barra lateral.)
+                                        </p>
+                                        `;
+          break;
+
+        case `Descubrir el servicio`:
+          titulo_modal.textContent = "Tácticas De Interoperabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Descubrir el servicio: </p>
+            <p class="d-inline">
+            Localice un servicio mediante la búsqueda de un servicio de directorio conocido. (Por "servicio", simplemente nos referimos a un conjunto de capacidades a las que se puede acceder mediante algún tipo de interfaz).
+
+            </p>
+
+            <p>
+            Puede haber múltiples niveles de direccionamiento indirecto en este proceso de ubicación, es decir, una ubicación conocida apunta a otra ubicación que a su vez puede ser Buscó el servicio. El servicio se puede ubicar por tipo de servicio, por nombre, por ubicación o por algún otro atributo.
+            </p>
+            `;
+          break;
+
+        case `orquestar`:
+          titulo_modal.textContent = "Tácticas De Interoperabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Orquestar: </p>
+              <p class="d-inline">
+              es una táctica que utiliza un mecanismo de control para coordinar, gestionar y secuenciar la invocación de servicios particulares (que podrían ignorarse entre sí).
+  
+              </p>
+  
+              <p>
+              La orquestación se utiliza cuando los sistemas interoperables deben interactuar de manera compleja para realizar una tarea compleja; Orquestación “scripts” de la interacción. 
+              </p><p>Los motores de flujo de trabajo son un ejemplo del uso de la táctica orquestada. El patrón de diseño del mediador puede cumplir esta función para una orquestación simple. La orquestación compleja se puede especificar en un lenguaje como BPEL.</p>
+              `;
+          break;
+
+        case `adaptar la interfaz`:
+          titulo_modal.textContent = "Tácticas De Interoperabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Adaptar La Interfaz: </p>
+                  <p class="d-inline">
+                  La interfaz Tailor es una táctica que agrega o elimina capacidades a una interfaz. Se pueden agregar capacidades como traducción, adición de búferes o suavizado de datos. Las capacidades también pueden ser eliminadas. 
+                  
+      
+                  </p>
+      
+                  <p>
+                  Un ejemplo de eliminación de capacidades es ocultar funciones particulares de usuarios no confiables. El patrón de decorador es un ejemplo de la táctica de interfaz de sastre.
+                  El bus de servicio empresarial que subyace a muchas arquitecturas orientadas a servicios combina ambas tácticas de interfaz de administración.
+                  </p>
+                  `;
+          break;
+
+        case `Split módulo`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Split Módulo: </p>
+                      <p class="d-inline">
+                      módulo . Si el módulo que se está modificando incluye una gran
+                      capacidad, los costos de modificación probablemente serán altos. La
+                      
+                      refinación del módulo en varios módulos más pequeños debería reducir
+                      el costo promedio de los cambios futuros.</p>
+                      `;
+          break;
+
+        case `Incrementar la coherencia semántica`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Incrementar La Coherencia Semántica: </p>
+                        <p class="d-inline">
+                        Si las responsabilidades A y B en un módulo no tienen el mismo propósito, deben ubicarse en módulos diferentes. Esto puede implicar la creación de un nuevo módulo o la transferencia de una responsabilidad a un módulo existente. 
+                        
+            
+                        </p>
+            
+                        <p>
+                        Un método para identificar las responsabilidades que se deben mover es formular hipótesis de posibles cambios que afectan a un módulo. Si algunas responsabilidades no se ven afectadas por estos cambios, entonces esas responsabilidades probablemente deberían eliminarse.
+                        </p>
+                        `;
+          break;
+
+        case `encapsular,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Encapsular: </p>
+                            <p class="d-inline">
+                            La encapsulación introduce una interfaz explícita a un módulo. Esta interfaz incluye una interfaz de programación de aplicaciones (API) y sus responsabilidades asociadas, como "realizar una transformación sintáctica en un parámetro de entrada a una representación interna". Tal vez la táctica de modificabilidad más común, la encapsulación reduce la probabilidad de que se propague un cambio en un módulo. a otros módulos. Las fortalezas de acoplamiento que anteriormente correspondían al módulo ahora van a la interfaz del módulo. 
+                            
+                
+                            </p>
+                
+                            <p>
+                            Sin embargo, estas fortalezas se reducen porque la interfaz limita las formas en que las responsabilidades externas pueden interactuar con el módulo (quizás a través de una envoltura). Las responsabilidades externas ahora solo pueden interactuar directamente con el módulo a través de la interfaz expuesta (interacciones indirectas, sin embargo, como la dependencia de la calidad del servicio, probablemente permanecerá sin cambios). Las interfaces diseñadas para aumentar la modificabilidad deben ser abstractas con respecto a los detalles del módulo que pueden cambiar, es decir, deben ocultar esos detalles. 
+                            </p>
+                            `;
+          break;
+
+        case `utilizar un intermediario,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Utilizar Un Intermediario: </p>
+                                <p class="d-inline">
+                                Rompe una dependencia y dada una dependencia entre la responsabilidad A y la responsabilidad B (por ejemplo, llevar a cabo A primero requiere llevar a cabo B), la dependencia se puede romper utilizando un intermediario. El tipo de intermediario depende del tipo de dependencia. Por ejemplo, un intermediario de publicación / suscripción eliminará el conocimiento del productor de datos de sus consumidores. 
+                    
+                                </p>
+                    
+                                <p>
+                                También lo hará un repositorio de datos compartido, que separa a los lectores de una parte de los datos de los escritores de esos datos. En una arquitectura orientada a servicios en la que los servicios se descubren entre sí mediante una búsqueda dinámica, el servicio de directorio es un intermediario.
+                                </p>
+                                `;
+          break;
+
+        case `restringir dependencias,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Restringir Dependencias: </p>
+                                    <p class="d-inline">
+                                    es una táctica que restringe los módulos con los que un módulo determinado interactúa o depende de ellos. En la práctica, esta táctica se logra al restringir la visibilidad de un módulo (cuando los desarrolladores no pueden ver una interfaz, no pueden emplearla) y por autorización (restringiendo el acceso solo a los módulos autorizados). 
+                        
+                                    </p>
+                        
+                                    <p>
+                                    Esta táctica se ve en arquitecturas en capas, en las que una capa solo puede usar capas inferiores (a veces solo la siguiente capa inferior) y en el uso de envoltorios, donde las entidades externas solo pueden ver (y, por lo tanto, depender de) la envoltura y no La funcionalidad interna que envuelve.
+                                    </p>
+                                    `;
+          break;
+
+        case `refactorización,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Refactorización: </p>
+                                        <p class="d-inline">
+                                        es una táctica que se realiza cuando dos módulos se ven afectados por el mismo cambio porque son duplicados (al menos parciales) el uno del otro. La refactorización de códigos es una práctica fundamental de los proyectos de desarrollo Agile, como un paso de limpieza para asegurarse de que los equipos no hayan producido códigos duplicados o demasiado complejos; sin embargo, el concepto se aplica también a los elementos arquitectónicos.
+                            
+                                        </p>
+                            
+                                        <p>
+                                        Las responsabilidades comunes (y el código que las implementa) se "excluyen" de los módulos donde existen y se les asigna un hogar propio apropiado. Al ubicar conjuntamente las responsabilidades comunes, es decir, al convertirlas en submódulos del mismo módulo principal, el arquitecto puede reducir el acoplamiento.
+                                        </p>
+                                        `;
+          break;
+
+        case `resumen de servicios comunes`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Resumen De Servicios Comunes: </p>
+                        <p class="d-inline">
+                        En el caso de que dos módulos proporcionen servicios no iguales pero similares, puede ser rentable implementar los servicios solo una vez de forma más general (abstracta). Cualquier modificación al servicio (común) tendría que ocurrir en un solo lugar, reduciendo los costos de modificación. 
+            
+                        </p>
+            
+                        <p>
+                        Una forma común de introducir una abstracción es parametrizar la descripción (y la implementación) de las actividades de un módulo. Los parámetros pueden ser tan simples como los valores para variables clave o tan complejos como las declaraciones en un lenguaje especializado que se interpretan posteriormente.
+                        </p>
+                        `;
+          break;
+
+        case `vincular valores en tiempo de compilación o tiempo de construcción`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Vincular Valores En Tiempo De Compilación O Tiempo De Construcción: </p>
+                <ul>
+                <li>Reemplazo de componentes (por ejemplo, en un script de compilación o makefile)</li>
+                <li>Parametrización en tiempo de compilación</li>
+                <li>Aspectos</li>
+                <li>Enlace de configuración en tiempo</li>
+                <li>Archivos de recursos</li>
+                </ul>`;
+          break;
+
+        case `las tácticas para vincular valores en tiempo de ejecución`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Las Tácticas Para Vincular Valores En Tiempo De Ejecución: </p>
+            <ul>
+            <li>Registro en tiempo de ejecución</li>
+            <li>Búsqueda dinámica (por ejemplo, para servicios).</li>
+            <li>Interpretar parámetros</li>
+            <li>Servidores de nombres</li>
+            <li>Plug-ins</li>
+            <li>Publicación-suscripción</li>
+            <li>Repositorios compartidos</li>
+            <li>Polimorfismo</li>
+            </ul>`;
+          break;
+
+        case `cancelar, deshacer, pausar / reanudar y agregar`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="fw-bold d-inline">Cancelar: </p>
+                <p>Cuando el usuario emite un comando de cancelación, el sistema debe escucharlo (por lo tanto, existe la responsabilidad de tener un escucha constante que no esté bloqueado por las acciones de lo que se esté cancelando); el comando que está siendo cancelado debe ser terminado; cualquier recurso utilizado por el comando cancelado debe ser liberado; y los componentes que colaboran con el comando cancelado deben ser informados para que también puedan tomar las medidas apropiadas.</p>
+
+                <p class="fw-bold d-inline">Deshacer: </p>
+                <p>Para admitir la capacidad de deshacer, el sistema debe mantener una cantidad suficiente de información sobre el estado del sistema para que se pueda restaurar un estado anterior, a solicitud del usuario.</p>
+                <p>Dicho registro puede tener la forma de "instantáneas" de estado, por ejemplo, puntos de control, o como un conjunto de operaciones reversibles. No todas las operaciones se pueden revertir fácilmente: por ejemplo, cambiar todas las apariciones de la letra "a" a la letra "b" en un documento no puede revertirse cambiando todas las instancias de "b" a "a", porque algunas de esas instancias de "b" puede haber existido antes del cambio original. En tal caso, el sistema debe mantener un registro más detallado del cambio. Por supuesto, algunas operaciones, como tocar una campana, no se pueden deshacer.</p>
+
+
+                <p class="fw-bold d-inline">Pausar-Reanudar: </p>
+                <p>Cuando un usuario ha iniciado una operación de larga duración, por ejemplo, descargando un archivo grande o un conjunto de archivos desde un servidor, a menudo es útil proporcionar la capacidad de pausar y reanudar la operación. La pausa efectiva de una operación de larga duración requiere la capacidad de liberar temporalmente los recursos para que puedan ser reasignados a otras tareas.</p>
+        
+                <p class="fw-bold d-inline">Agregar: </p>
+                <p>Cuando un usuario está realizando operaciones repetitivas u operaciones que afectan a un gran número de objetos de la misma manera, es útil proporcionar la capacidad de agregar los objetos de nivel inferior en un solo grupo, de modo que la operación se pueda aplicar a la grupo, liberando así al usuario de la monotonía (y el potencial de errores) de hacer la misma operación repetidamente. Por ejemplo, agregue todos los objetos en una diapositiva y cambie el texto a fuente de 14 puntos.</p>
+                `;
+          break;
+
+        case `mantener el modelo de tarea,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="fw-bold d-inline">Mantener El Modelo De Tarea: </p>
+              
+                    <p class="d-inline">El modelo de tareas se utiliza para determinar el contexto, de modo que el sistema pueda tener una idea de lo que el usuario está intentando y brindar asistencia. Por ejemplo, saber que las oraciones comienzan con letras mayúsculas permitiría que una aplicación corrija una letra minúscula en esa posición.</p> `;
+          break;
+
+        case `mantener modelo de usuario,`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="fw-bold d-inline">Mantener Modelo De Usuario: </p>
+                         
+                            <p class="d-inline" >Este modelo representa explícitamente el conocimiento del usuario del sistema, el comportamiento del usuario en términos del tiempo de respuesta esperado y otros aspectos específicos de un usuario o una clase de usuarios.</p> 
+                            <p>Por ejemplo, mantener un modelo de usuario le permite al sistema controlar la selección del mouse para que no se seleccione todo el documento cuando se requiere el desplazamiento. O un modelo puede controlar la cantidad de asistencia y las sugerencias que se proporcionan automáticamente a un usuario. Un caso especial de esta táctica se encuentra comúnmente en la personalización de la interfaz de usuario , en donde un usuario puede modificar explícitamente el modelo de usuario del sistema.   </p>
+                            `;
+          break;
+
+        case `Mantener el modelo del sistema`:
+          titulo_modal.textContent = "Tácticas De Modificabilidad";
+          content_modal.innerHTML = `<p class="fw-bold d-inline">Mantener El Modelo Del Sistema: </p>
+                            
+                            <p class="d-inline">Aquí el sistema mantiene un modelo explícito de sí mismo. Esto se usa para determinar el comportamiento esperado del sistema para que el usuario pueda recibir los comentarios apropiados. Una manifestación común de un modelo de sistema es una barra de progreso que predice el tiempo necesario para completar la actividad actual.</p> `;
+          break;
+
         default:
           break;
       }

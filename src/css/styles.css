@@ -67,7 +67,8 @@
 /* hacer click y que no salga debajo del navbar */
 #tacticas::before,
 #atributos::before,
-#inicio::before{
+#inicio::before
+,#contactanos::before{
   display: block;
   content: " ";
   /* margin-top: -10px; */
