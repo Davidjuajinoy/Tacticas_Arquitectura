@@ -216,6 +216,153 @@ let tactica = document
                         `;
           break;
 
+        case `retroceso,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Retroceso: </p>
+                        <p class="d-inline">
+                        Permite que el sistema vuelva a un estado bueno conocido anteriormente, conocido como la "línea de retroceso" (retroceso) en el momento de la detección de un fallo. Una vez que se alcanza el buen estado, entonces la ejecución puede continuar.</p> 
+                        <p>
+                        Esta táctica a menudo se combina con tácticas de redundancia activa o pasiva, de modo que después de que se haya producido una reversión, una versión en espera del componente fallido pase a estado activo. La reversión depende de que una copia de un buen estado anterior (un punto de control) esté disponible para los componentes que están retrocediendo. Los puntos de control se pueden almacenar en una ubicación fija y actualizar a intervalos regulares, o en momentos convenientes o significativos en el procesamiento, como al completar una operación compleja.
+                        </p>
+                        `;
+          break;
+
+        case `actualización de software,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Actualización De Software: </p>
+                        <p class="d-inline">
+                        otra táctica de preparación y reparación cuyo objetivo es lograr actualizaciones en servicio de imágenes de código ejecutables de una manera que no afecte al servicio. Esto se puede realizar como un parche de función, un parche de clase o una actualización de software en servicio (ISSU) sin éxito. Un parche de función se usa en la programación de procedimientos y emplea un enlazador / cargador incremental para almacenar una función de software actualizada en un segmento asignado previamente de la memoria de destino.</p> 
+                        <p>
+                        La nueva versión de la función de software empleará los puntos de entrada y salida de la función en desuso. Además, al cargar la nueva función de software, la tabla de símbolos debe actualizarse y la memoria caché de instrucciones debe invalidarse. La táctica de parche de clase es aplicable para objetivos que ejecutan código orientado a objetos, donde las definiciones de clase incluyen un mecanismo de puerta trasera que permite la adición en tiempo de ejecución de los datos y funciones de los miembros.tácticas de redundancia para lograr actualizaciones que no afecten al servicio del software y el esquema asociado. En la práctica, el parche de función y el parche de clase se usan para entregar correcciones de errores, mientras que la actualización de software en servicio sin problemas se usa para entregar nuevas características y capacidades.
+                        </p>
+                        `;
+          break;
+
+        case `reintentar,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Reintentar: </p>
+                          <p class="d-inline">
+                          La táctica de reintento asume que la falla que causó el fallo es transitoria y el reintento de la operación puede llevar al éxito. </p> 
+                          <p>
+                          Esta táctica se usa en redes y en granjas de servidores donde se esperan fallas y son comunes. Debe haber un límite en el número de reintentos que se intentan antes de que se declare una falla permanente.
+                          </p>
+                          `;
+          break;
+
+        case `ignorar comportamiento defectuoso,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Ignorar Comportamiento Defectuoso: </p>
+                              <p class="d-inline">
+                              Esta táctica requiere ignorar los mensajes enviados desde una fuente particular cuando determinamos que esos mensajes son falsos. Por ejemplo, nos gustaría ignorar los mensajes de un componente externo que lanza un ataque de denegación de servicio al establecer filtros de la Lista de control de acceso.</p>         
+                              `;
+          break;
+
+        case `degradación,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Degradación: </p>
+                                  <p class="d-inline">
+                                  mantiene las funciones más críticas del sistema en presencia de fallas de componentes, eliminando funciones menos críticas.</p> 
+                                  <p>
+                                  Esto se hace en circunstancias en las que los fallos de componentes individuales reducen con gracia la funcionalidad del sistema en lugar de causar un fallo completo del sistema.
+                                  </p>
+                                  `;
+          break;
+
+        case `reconfiguración,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Reconfiguración: </p>
+                                      <p class="d-inline">
+                                      intenta recuperarse de las fallas de los componentes al reasignar responsabilidades a los recursos (potencialmente restringidos) que dejaron de funcionar, mientras se mantiene la mayor funcionalidad posible.</p>
+                                      `;
+          break;
+
+        case `reintroducción (táctica de la sombra, resincronización de estados, reinicio de escalada, reenvió directo)`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Reintroducción: </p>
+                                        <p class="d-inline">
+                                        es cuando un componente fallado se reintroduce después de que se haya corregido. Las tácticas de reintroducción incluyen lo siguiente:</p>
+                                        </br></br>
+
+
+                                        <p class="fw-bold d-inline">
+                                        La Táctica De La Sombra: </p>
+                                        <p class="d-inline">Se refiere a la operación de un componente previamente fallado o en servicio actualizado en un "modo sombra" durante un tiempo predefinido antes de revertir el componente a un rol activo. Durante este tiempo, su comportamiento puede ser monitoreado para ver si es correcto y puede repoblar su estado de manera incremental</p>
+
+                            </br></br>
+                                        <p class="fw-bold d-inline">
+                                        Resincronización De Estados: </p>
+                                        <p class="d-inline">Es un socio de reintroducción de las tácticas de preparación y reparación de redundancia activa y redundancia pasiva. Cuando se usa junto con la táctica de redundancia activa, la resincronización de estado se produce de manera orgánica, ya que los componentes activos y en espera reciben y procesan entradas idénticas en paralelo. En la práctica, los estados de los componentes activos y en espera se comparan periódicamente para garantizar la sincronización. </p>
+                                        <p>
+                                        Esta comparación puede basarse en un cálculo de comprobación de redundancia cíclica (suma de comprobación) o, para sistemas que proporcionan servicios críticos para la seguridad, un cálculo de resumen de mensaje (una función hash de una vía). Cuando se usa junto con la táctica de redundancia pasiva (repuesto dinámico), la resincronización de estado se basa únicamente en la información de estado periódico transmitida desde el (los) componente (s) activo (s) al (los) componente (s) en espera (s), generalmente a través del punto de control.</p>
+                                        
+                                        <p class="fw-bold d-inline">Reinicio De Escalada:</p> 
+                                        <p class="d-inline">una táctica de reintroducción que permite al sistema recuperarse de fallas al variar la granularidad de los componentes reiniciados y minimizar el nivel de servicio afectado. Por ejemplo, considere un sistema que admite cuatro niveles de reinicio, de la siguiente manera. El nivel más bajo de reinicio (llámelo Nivel 0) y, por lo tanto, que tiene el menor impacto en los servicios, emplea redundancia pasiva (repuesto dinámico), donde se eliminan y recrean todos los subprocesos secundarios del componente defectuoso.</p>
+                                        <p>
+                                        De esta manera, solo los datos asociados con los subprocesos secundarios se liberan y reinicializan. El siguiente nivel de reinicio (Nivel 1) libera y reinicializa toda la memoria desprotegida (la memoria protegida permanecería intacta). El siguiente nivel de reinicio (Nivel 2) libera y reinicializa toda la memoria, tanto protegida como desprotegida, lo que obliga a todas las aplicaciones a recargarse y reinicializarse. Y el nivel final de reinicio (Nivel 3) implicaría volver a cargar completamente y reinicializar la imagen ejecutable y los segmentos de datos asociados. El soporte para la táctica de reinicio escalado es particularmente útil para el concepto de degradación elegante, donde un sistema puede degradar los servicios que proporciona al tiempo que mantiene el soporte para aplicaciones de misión crítica o de seguridad.</p>
+                                        
+                                        <p class="fw-bold d-inline">El Reenvío Directo (NSF):</p>
+                                        <p class="d-inline">es un concepto que se originó en el diseño del enrutador. En este diseño, la funcionalidad se divide en dos partes: supervisión, o plano de control (que administra la conectividad y la información de enrutamiento), y plano de datos (que realiza el trabajo real de enrutar paquetes desde el remitente hasta el receptor).</p>
+                                        <p>
+                                        Si un enrutador experimenta la falla de un supervisor activo, puede continuar enviando paquetes a lo largo de rutas conocidas, con enrutadores vecinos, mientras se recupera y valida la información del protocolo de enrutamiento. Cuando se reinicia el plano de control, implementa lo que a veces se denomina “reinicio correcto”, reconstruyendo de forma incremental su base de datos de protocolo de enrutamiento incluso cuando el plano de datos continúa operando.
+                                        </p>
+                                        `;
+          break;
+
+        case `retiro del servicio,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Retiro Del Servicio: </p>
+                            <p class="d-inline">
+                            Se refiere a colocar temporalmente un componente del sistema en un estado fuera de servicio con el fin de mitigar posibles fallas del sistema. </p> 
+                            <p>
+                            Un ejemplo consiste en poner fuera de servicio un componente de un sistema y reiniciarlo para eliminar fallas latentes (por ejemplo,como fugas de memoria, fragmentación o errores de software en un caché no protegido) antes de que la acumulación de fallas afecte el servicio (lo que resulta en una falla del sistema). Otro término para esta táctica es el rejuvenecimiento del software.
+                            </p>
+                            `;
+          break;
+
+        case `transacciones,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Transacciones: </p>
+                                <p class="d-inline">
+                                Los sistemas dirigidos a servicios de alta disponibilidad aprovechan la semántica transaccional para garantizar que los mensajes asíncronos intercambiados entre componentes distribuidos sean atómicos , coherentes , aislados y duraderos . </p> 
+                                <p>
+                                Estas cuatro propiedades se denominan "propiedades ACID". La realización más común de la táctica de transacciones es el protocolo de "compromiso en dos fases" (también conocido como 2PC). Esta táctica evita las condiciones de carrera causadas por dos procesos que intentan actualizar el mismo elemento de datos.
+                                </p>
+                                `;
+          break;
+
+        case `modelo predictivo,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Modelo Predictivo: </p>
+                                    <p class="d-inline">
+                                    Un modelo predictivo, cuando se combina con un monitor, se emplea para monitorear el estado de salud de un proceso del sistema para asegurar que el sistema está operando dentro de sus parámetros operativos nominales, y para tomar medidas correctivas cuando se detectan condiciones que predicen un futuro probable. </p> 
+                                    <p>
+                                    Faltas Las métricas de rendimiento operacional monitoreadas se utilizan para predecir la aparición de fallas; los ejemplos incluyen la tasa de establecimiento de sesión (en un servidor HTTP), el cruce de umbrales (monitoreo de marcas de agua altas y bajas para algunos recursos compartidos restringidos), o el mantenimiento de estadísticas para el estado del proceso (en servicio, fuera de servicio, en mantenimiento, inactivo), mensaje estadísticas de longitud de cola, y así sucesivamente.
+                                    </p>
+                                    `;
+          break;
+
+        case `prevención de excepciones,`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Prevención De Excepciones: </p>
+                                        <p class="d-inline">
+                                        Se refiere a las técnicas empleadas con el fin de evitar que ocurran excepciones al sistema. El uso de clases de excepción, que permite que un sistema se recupere de forma transparente de las excepciones del sistema, se trató anteriormente. </p> 
+                                        <p>
+                                        Otros ejemplos de prevención de excepciones incluyen tipos de datos abstractos, como punteros inteligentes y el uso de envoltorios para evitar fallas, como punteros colgantes y violaciones de acceso a semáforos. Los punteros inteligentes previenen las excepciones al realizar la comprobación de los límites de los punteros y al garantizar que los recursos se desasignen automáticamente cuando no se hace referencia a los datos. De esta manera se evitan las fugas de recursos.
+                                        </p>
+                                        `;
+          break;
+
+        case `aumentar conjunto de competencias`:
+          titulo_modal.textContent = "Tácticas De Disponibilidad";
+          content_modal.innerHTML = `<p class="h5 fw-bold d-inline">Aumentar Conjunto De Competencias: </p>
+                                            <p class="d-inline">
+                                            El conjunto de competencias de un programa es el conjunto de estados en los que es "competente" para operar. Por ejemplo, el estado cuando el denominador es cero está fuera del conjunto de competencias de la mayoría de los programas de división. Cuando un componente genera una excepción, está indicando que se ha descubierto que está fuera de su conjunto de competencias; En esencia, no sabe qué hacer y está tirando la toalla. </p> 
+                                            <p>
+                                            Aumentar el conjunto de competencias de un componente significa diseñarlo para manejar más casos (fallas) como parte de su operación normal. Por ejemplo, un componente que asume que tiene acceso a un recurso compartido puede generar una excepción si descubre que el acceso está bloqueado. Otro componente puede simplemente esperar el acceso o regresar inmediatamente con una indicación de que completará su operación la próxima vez que tenga acceso.
+                                            </p>
+                                            `;
+          break;
+
         default:
           break;
       }
