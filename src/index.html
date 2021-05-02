@@ -68,7 +68,7 @@
         <main class="bg-light ">
             <div class="container pt-3" id="atributos">
                 <div class="titulo_main">
-                    <p class="h1 mt-5">¿Qué son los atributos de calidad?</p>
+                    <p class="h1 mt-5 fw-bold">¿Qué son los atributos de calidad?</p>
                 </div>
                 <div class="p_main mb-5">
                     <p class=" text-muted col-md-5 col-sm-12">Un atributo de calidad es una propiedad medible de un sistema, que indica qué tan bien el sistema satisface las necesidades de las partes interesadas.</p>
@@ -82,9 +82,9 @@
                                 <img src="assets/img/availability.svg" class="img-fluid" alt="">
                                 <p class="h4 mt-4 align-content-center">Disponibilidad</p>
                             </div>
-                            <p class="text-muted ">Es Propiedad de software que esta lista para llevar 
-                                a cabo su tarea cuando se requiera. Busca minimizar el tiempo de interrupción del 
-                                servicio mitigando fallas.</p>
+                            <p class="text-muted ">Es la capacidad de que el software esté listo para llevar a cabo una tarea cuando se requiera.</p>
+                                <p class="text-muted">Busca minimizar el tiempo de interrupción del 
+                                    servicio mitigando fallas.</p>
                         </div>
                         <div class="col-sm-12 col-md-4 px-5">
                             <div class="d-flex flex-column align-items-center">
@@ -162,7 +162,7 @@
 
         <section class="container">
             <div class="titulo_main pt-3" id="tacticas">
-                <p class="h1 mt-5">Tácticas De Arquitectura</p>
+                <p class="h1 mt-5 fw-bold">Tácticas De Arquitectura y Escenario</p>
             </div>
            
                   <!-- ! Tacticas -->
@@ -178,31 +178,169 @@
                     </div>
                   </nav>
 
+
+                  <!-- MOdal -->
+                      
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="titulo_modal">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="content_modal">
+                        
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+              <!-- Modal -->
+
                   <!-- !tabs Content -->
                   <div class="tab-content mt-5" id="nav-tabContent">
+                    <!--? DISPONIBILIDAD -->
                     <div class="tab-pane fade show active" id="nav-disponibilidad" role="tabpanel" aria-labelledby="nav-disponibilidad-tab">
-                        <ul>
-                            <li class="h5">Detección de fallas: <span class="h6 ">Ping, monitor, heartbeat, marca de tiempo, comprobación de estado, monitoreo de la condición, votacion, replicacion, redundancia funcional, redundancia analítica, deteccion de excepciones </span></li>
-                            <li class="h5">Recuperarse de fallas:<span class="h6 ">redundancia activa, redundancia pasiva, repuesto, manejo de excepciones, retroceso, actualizacion de software, reintentar, ignorar comportamiento defectuoso </span> </li>
-                            <li class="h5">Prevención de fallas: <span class="h6 ">retiro del servicio ,transacciones, modelo predictivo </span></li>
-                            
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de disponibilidad se puede describir con las siguientes partes:</p>
+
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Puede ser interno o externo (Personas, hardware, software, infraestructura) que se encarga de producir el estímulo.</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es el fallo que se produce puede ser de tipo (omisión, crash, tiempo incorrecto, respuesta incorrecta.</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es aquel que especifica el recurso que se requiere que esté altamente disponible (un procesador, canal de comunicación, proceso o almacenamiento).</p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Es el estado del sistema cuando ocurre la falla o la falla también puede afectar la respuesta deseada del sistema</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">Son las reacciones asociadas a la falla.</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es la duración de disponibilidad o un tiempo para detectar la falla.</p></li>
                         </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>El monitor de latido determina que el servidor no responde durante las operaciones normales. El sistema informa al operador y continúa funcionando sin tiempo de inactividad.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/disponibilidad.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Disponibilidad</P>
+                        <p>Está diseñada para permitir que un sistema sufra fallas en el sistema, de modo que un servicio que está siendo entregado por el sistema siga ejecutándose</p>
+                        <p>Se clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Detección de fallas: <p class="fs-6 fw-normal d-inline">son las encargadas de la detección de signos de vida de varios componentes. Las tácticas que se incluyen en esta categoría son <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> Ping, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> monitor, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> heartbeat, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  marca de tiempo, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> comprobación de estado, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> monitoreo de la condición, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> votación, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> replicación, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> redundancia funcional, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> redundancia analítica, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> detección de excepciones, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> excepciones del sistema, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> cercado de parametros, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> escritura de parametros, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> tiempo de espera, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">auto prueba</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Recuperación de fallas: <p class="fs-6 fw-normal d-inline">Son una combinación que se encarga de reintentar una operación o mantener datos o cálculos redundantes. Las tácticas que se incluyen en esta categoría son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> redundancia activa, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> redundancia pasiva, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> repuesto, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  manejo de excepciones, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> retroceso, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> actualización de software, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> reintentar, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> ignorar comportamiento defectuoso, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> degradación, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> reconfiguración, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> detección de excepciones, </a>  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> reintroducción (táctica de la sombra, resincronización de estados, reinicio de escalada, reenvió directo).</a></p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Prevención de fallas: <p class="fs-6 fw-normal d-inline">Son las que dependen de la eliminación de elementos del servicio o de la utilización de mecanismos para limitar el alcance de las fallas. Las tácticas que se incluyen en esta categoría son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> retiro del servicio, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> transacciones, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> modelo predictivo, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  prevención de excepciones, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar conjunto de competencias.</a></p></li>
+
+                        </ul>
+                        </div>
+                                            
                     </div>
+                    <!--?  End DISPONIBILIDAD -->
+
+
+<!--? Rendimiento -->
                     <div class="tab-pane fade" id="nav-rendimiento" role="tabpanel" aria-labelledby="nav-rendimiento-tab">
-                        <ul>
-                            <li class="h5">Acoplamiento: <span class="h6 "></span> </li>
-                            <li class="h5">Cohesión:  <span class="h6 "></span> </li>
-                           
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de rendimiento se puede describir con las siguientes partes:</p>
+
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Son de fuentes internas o externas, que se encargan de generar los eventos del sistema.</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Son las llegadas del evento, el patrón de llegada puede ser periódico, estocástico o esporádico, caracterizado por parámetros numéricos.</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es el sistema o uno o más de sus componentes.</p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Son los varios modos operativos que puede estar el sistema (normal, emergencia, carga máxima o sobrecarga</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">Es procesar los eventos y cambiar el modo del sistema (normal, emergencia, carga máxima o sobrecarga).</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">: Es el tiempo que lleva procesar los eventos (latencia, fecha límite, rendimiento, tasa de errores).</p></li>
+                        </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>El monitor de latido determina que el servidor no responde durante las operaciones normales. El sistema informa al operador y continúa funcionando sin tiempo de inactividad.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/rendimiento.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Rendimiento</P>
+                        <p>Son las encargadas de controlar el tiempo dentro del cual se genera una respuesta.</p>
+                        <p>Se clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Control de la demanda de recursos: <p class="fs-6 fw-normal d-inline">Es administrar cuidadosamente la demanda de recursos. Esto se puede hacer reduciendo el número de eventos procesados aplicando una tasa de muestreo o limitando la velocidad a la que el sistema responde a los eventos. Las tácticas que se incluyen en esta categoría son  <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> gestionar frecuencia de muestreo, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> limitar la respuesta al evento, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> priorizar eventos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  reducir los gastos generales, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> tiempos de ejecución, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar la eficiencia</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Administrar recursos: <p class="fs-6 fw-normal d-inline">Es cuando recurso puede ser cambiado por otro por ejemplo los datos intermedios se pueden mantener en un caché o se pueden regenerar dependiendo de la disponibilidad de recursos de tiempo y espacio. Las tácticas que se incluyen en esta categoría son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> aumentar los recursos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> introducir la concurrencia, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de cómputos, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener múltiples copias de datos, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  tamaños de cola enlazados, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> programas recursos,</a></p></li>
+
                         </ul>
 
                     </div>
-                    <div class="tab-pane fade" id="nav-interoperabilidad" role="tabpanel" aria-labelledby="nav-interoperabilidad-tab">
-                        <ul>
-                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
-                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
-                           
-                        </ul>
                     </div>
+
+<!--? EndRendimiento -->
+
+<!--? Interoperabilidad -->
+                    <div class="tab-pane fade" id="nav-interoperabilidad" role="tabpanel" aria-labelledby="nav-interoperabilidad-tab">
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de interoperabilidad se puede describir con las siguientes partes:</p>
+
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Es la solicitud para interoperar con otro sistema.</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es una solicitud para intercambiar información entre sistemas.</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Son los sistemas que deseen interoperar.</p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Es cuando los sistemas que desean interoperar se descubren en tiempo de ejecución o se conocen antes del tiempo de ejecución</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">Es el resultado de la solicitud de interoperar puede ser el intercambio de información o que la solicitud sea rechazada, las entidades apropiadas son notificadas.</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es el porcentaje de intercambios de información
+                                procesados correctamente o el porcentaje de intercambios de información rechazados correctamente.
+                                </p></li>
+                        </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>El sistema de información del
+                            vehículo envía nuestra ubicación actual al sistema de monitoreo de
+                            tráfico. El sistema de monitoreo de tráfico combina nuestra ubicación
+                            con otra información, superpone esta información en un mapa de
+                            Google y la difunde. Nuestra información de ubicación está
+                            correctamente incluida con una probabilidad del 99.9%.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/interoperabilidad.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Interoperabilidad</P>               
+                        <p>Se clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Localizar: <p class="fs-6 fw-normal d-inline">Se utiliza cuando los sistemas que interactúan deben descubrirse en tiempo de ejecución, solo hay una táctica en esta categoría <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">Descubrir el servicio</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Gestionar interfaces: <p class="fs-6 fw-normal d-inline">consta de 2 tácticas que son <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  orquestar </a>y <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  adaptar la interfaz  </a></p>.</li>
+
+                            
+
+                        </ul>
+
+                        <p>Para lograr la interoperabilidad, los sistemas relevantes se ubican entre sí y luego administran las interfaces para que puedan intercambiar información.</p>
+
+                        </div>
+                    </div>
+<!--? EndInteroperabilidad -->
 
                     <div class="tab-pane fade" id="nav-modificabilidad" role="tabpanel" aria-labelledby="nav-modificabilidad-tab">
                         <ul>
@@ -239,76 +377,13 @@
                     </div>
 
                   </div>
+
+
+
+
                   <!-- !End tabs Content -->
 
-                  <!-- <section class="mt-5">
-                    <div class="row mb-5">
-                        <div class="col-sm-12 col-md-3 px-5">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="assets/img/availability.svg" class="img-fluid" alt="">
-                                <p class="h4 mt-4 align-content-center">Disponibilidad</p>
-                            </div>
-                            
-                        </div>
-                        <div class="col-sm-12 col-md-6 px-5">
-                            <ul>
-                                <li class="h5">Detección de fallas: <span class="h6 ">Ping, monitor, heartbeat, marca de tiempo, comprobación de estado, monitoreo de la condición, votacion, replicacion, redundancia funcional, redundancia analítica, deteccion de excepciones </span></li>
-                                <li class="h5">Recuperarse de fallas:<span class="h6 ">redundancia activa, redundancia pasiva, repuesto, manejo de excepciones, retroceso, actualizacion de software, reintentar, ignorar comportamiento defectuoso </span> </li>
-                                <li class="h5">Prevención de fallas: <span class="h6 ">retiro del servicio ,transacciones, modelo predictivo </span></li>
-                                
-                            </ul>
-                        
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="row mb-5">
-                        <div class="col-sm-12 col-md-3 px-5">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="assets/img/interoperabilida.svg" class="img-fluid" alt="">
-                                <p class="h4 mt-4 align-content-center">Interoperabilidad</p>
-                            </div>
-                            
-                        </div>
-                        <div class="col-sm-12 col-md-7 px-5">
-                            <ul>
-                                <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
-                                <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
-                               
-                            </ul>
-                          
-                        </div>
-                        
-                    </div>
-
-
-                    
-                    <div class="row mb-5">
-                        <div class="col-sm-12 col-md-3 px-5">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="assets/img/performance.svg" class="img-fluid" alt="">
-                                <p class="h4 mt-4 align-content-center">Rendimiento</p>
-                            </div>
-                            
-                        </div>
-                        <div class="col-sm-12 col-md-7 px-5">
-                            <ul>
-                                <li class="h5">Acoplamiento: <span class="h6 "></span> </li>
-                                <li class="h5">Cohesión:  <span class="h6 "></span> </li>
-                               
-                            </ul>
-                            <p class="text-muted"></p>
-                        </div>
-                        
-                    </div>
-
-
-
-                   
-
                
-                </section> -->
                 <!-- ! Tacticas -->
         </section>
 

@@ -43,6 +43,11 @@
     user-select: none;
     
     }
+
+
+.link-success{
+    cursor: pointer !important;
+}
     
 @keyframes imgAnimation{
 0%{
