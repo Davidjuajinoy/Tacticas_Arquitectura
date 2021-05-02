@@ -10,7 +10,7 @@ let tactica = document
   .forEach((Element) => {
     Element.addEventListener("click", (e) => {
       const elem = e.target.textContent.trim();
-      console.log(elem);
+      // console.log(elem);
       switch (elem) {
         case `Ping,`:
           titulo_modal.textContent = "Tácticas De Disponibilidad";
