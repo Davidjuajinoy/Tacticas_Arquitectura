@@ -228,7 +228,7 @@
 
                         <div>
                         <P class="h5 fw-bold">Tácticas De Disponibilidad</P>
-                        <p>Está diseñada para permitir que un sistema sufra fallas en el sistema, de modo que un servicio que está siendo entregado por el sistema siga ejecutándose</p>
+                        <p class="mb-0">Está diseñada para permitir que un sistema sufra fallas en el sistema, de modo que un servicio que está siendo entregado por el sistema siga ejecutándose</p>
                         <p>Se clasifican en:</p>
 
                         <ul class="">
@@ -267,14 +267,16 @@
                         </ul>
 
                         <p class="h5 fw-bold">Ejemplo</p>
-                        <p>El monitor de latido determina que el servidor no responde durante las operaciones normales. El sistema informa al operador y continúa funcionando sin tiempo de inactividad.</p>
+                        <p>Los usuarios inician transacciones en operaciones
+                            normales. El sistema procesa las transacciones con una latencia
+                            promedio de dos segundos.</p>
                         <div class="d-flex justify-content-center mb-5">
                             <img src="assets/img/rendimiento.png" class="img-fluid" alt="" >
                         </div>
 
                         <div>
                         <P class="h5 fw-bold">Tácticas De Rendimiento</P>
-                        <p>Son las encargadas de controlar el tiempo dentro del cual se genera una respuesta.</p>
+                        <p class="mb-0">Son las encargadas de controlar el tiempo dentro del cual se genera una respuesta.</p>
                         <p>Se clasifican en:</p>
 
                         <ul class="">
@@ -342,39 +344,232 @@
                     </div>
 <!--? EndInteroperabilidad -->
 
+<!--? modificabilidad -->
                     <div class="tab-pane fade" id="nav-modificabilidad" role="tabpanel" aria-labelledby="nav-modificabilidad-tab">
-                        <ul>
-                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
-                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
-                           
-                        </ul>
-                    </div>
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de modificabilidad se puede describir con las siguientes partes:</p>
 
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Es especificar quién realiza el cambio (el desarrollador, un administrador del sistema o un usuario final).</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es especificar el cambio a realizar.</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es especificar qué se va a cambiar (componentes o módulos específicos, la plataforma del sistema, su interfaz de usuario, su entorno u otro sistema con el que interactúa).</p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Es especificar cuándo se puede realizar el cambio (tiempo de diseño, tiempo de compilación, tiempo de compilación, tiempo de inicio o tiempo de ejecución).</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">Es Realizar el cambio, probarlo e implementarlo).</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es el tiempo y el dinero que toma hacer el cambio.</p></li>
+                        </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>El desarrollador desea cambiar la interfaz de usuario modificando el código en el momento del diseño. Las modificaciones se realizan sin efectos secundarios dentro de las tres horas.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/modificabilidad.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Modificabilidad</P>
+                        <p class="m-0">Son las que tienen como objetivo controlar la complejidad de los cambios, así como el tiempo y el costo de los cambios.</p>
+                        <p>Para entender bien las tácticas hay que saber dos conceptos claves que son:</p>
+                        <p class="fs-6  fw-bold d-inline">Acoplamiento: <p class="fs-6 text-muted d-inline">Se refiere a la complejidad de la relación que existen en las clases se clasifica en un sistema estrechamente acoplado y en una complejidad débil.</p></p>
+                        <p class="fs-6  fw-bold d-inline">Cohesión: <p class="fs-6 text-muted d-inline">Se refiere a un al nivel de coherencia que existe entre los distintos miembros de una clase, se clasifica en alta y baja.</p></p>
+                        <p>Las tácticas e clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Reducir el tamaño de un módulo: <p class="fs-6 fw-normal d-inline">En esta categoría se encuentra <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> Split módulo</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Aumentar la cohesión: <p class="fs-6 fw-normal d-inline">Es mover responsabilidades de un módulo a otro y reducir la probabilidad de que afectes responsabilidades en el módulo original y la táctica de esta categoría es<a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> Incrementar la coherencia semántica</a>.</p></li>
+
+                            <li class="fs-5 fw-bold lista_tacticas">Reducir el acoplamiento: <p class="fs-6 fw-normal d-inline">en esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> encapsular, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> utilizar un intermediario, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> restringir dependencias, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  refactorización, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> resumen de servicios comunes</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Aplazamiento de Encuadernación: <p class="fs-6 fw-normal d-inline">Se encarga de diseñar flexibilidad, en esta táctica se encuentran las tácticas para <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> vincular valores en tiempo de compilación o tiempo de construcción </a>y <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> las tácticas para vincular valores en tiempo de ejecución</a>.</p></li>
+
+                        </ul>
+
+                    </div>
+                    </div>
+<!--? End modificabilidad -->
+
+<!--? Testeabilidad -->
                     <div class="tab-pane fade" id="nav-testeabilidad" role="tabpanel" aria-labelledby="nav-testeabilidad-tab">
-                        <ul>
-                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
-                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
-                           
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de testeabilidad se puede describir con las siguientes partes:</p>
+
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Es quien realiza la prueba al sistema puede ser una persona o un sistema.</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es la ejecución de un conjunto de pruebas al sistema.</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es la unidad de código que se está probando puede ser un módulo en la arquitectura, un subsistema o todo el sistema.
+                                </p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Son las etapas en la cual se realiza la prueba (etapa de desarrollo y mantenimiento).</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">El sistema se puede controlar para realizar las pruebas
+                                deseadas y se pueden observar los resultados de la prueba.</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es la representación de la facilidad en la que se probó el sistema, puede ser el tiempo de la cantidad de esfuerzo para preparar el entorno de prueba, encontrar fallas.</p></li>
                         </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>El
+                            probador de la unidad completa una unidad de código durante el
+                            desarrollo y realiza una secuencia de prueba cuyos resultados se
+                            capturan y que proporciona una cobertura de ruta del 85 por ciento
+                            dentro de las tres horas de la prueba.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/testeabilidad.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Testeabilidad</P>
+                        <p class="mb-0">El objetivo es permitir pruebas más fáciles cuando se completa un incremento del desarrollo de software.</p>
+                        <p>Se clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Controlar y observar el estado del sistema: <p class="fs-6 fw-normal d-inline">son fundamentales para la capacidad de
+                                Prueba y los dos van de la mano ya que no tiene sentido controlar algo
+                                si no puedes observar lo que sucede cuando lo haces. En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> interfaces especializadas, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> método de establecer y obtener variables, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> un método de informe, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">  método de restablecimiento, </a><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> método de activar resultados detallados, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> grabación /reproducción, </a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> localizar almacenamiento de estado,</a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> fuentes de datos abstractos,</a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> SandBoxing,</a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> afirmaciones ejecutables</a>.</p></li>
+
+
+                            <li class="fs-5 fw-bold lista_tacticas">Complejidad límite: <p class="fs-6 fw-normal d-inline">Se encargan de mantener el sistema simple para que sean fáciles de probar. En esta categoría se incluyen<a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> Limitar la complejidad estructural, </a> y <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> el Limitar el no determinismo</a>.</p></li>
+
+                        </ul>
+
+                        </div>
+               
                     </div>
+<!--? Testeabilidad -->
 
-
+<!-- ? Seguridad -->
                     <div class="tab-pane fade" id="nav-seguridad" role="tabpanel" aria-labelledby="nav-seguridad-tab">
-                        <ul>
-                            <li class="h5">Localizar: <span class="h6 ">Descubrir el servicio</span> </li>
-                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
-                           
+                        <p class="h4  fw-bold">Escenario</p>
+                        <p>Un escenario general de seguridad se puede describir con las siguientes partes:</p>
+
+                        <ul class="list">
+                            <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Es quien realiza el ataque puede ser una persona o un sistema.</p></li>
+
+                            <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es el ataque (intento no autorizado para mostrar datos, cambiarlos o eliminarlos, acceder a servicios del sistema, cambiar el comportamiento del sistema o reducir la disponibilidad).</p></li>
+
+                            <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es el objetivo del ataque (los servicios del sistema, datos dentro del sistema, componente o recurso del sistema, datos producidos o consumidos por el sistema).
+                                </p></li>
+
+                            <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Son las condiciones en la cual se encuentra el sistema en el momento que se recibe el ataque (en línea, fuera de línea, desconectado de una red).</p></li>
+
+                            <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">Es cuando el sistema debe garantizar que las transacciones tengan un seguimiento y se realicen de manera segura, que no suceda el acceso no autorizado, servicios o datos manipulados.</p></li>
+
+                            <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es el tiempo en el que el sistema detecta el ataque, cuántos ataques se resistieron, cuánto tiempo tomó recuperarse de un ataque exitoso, y cuánta
+                                información fue vulnerable a un ataque en particular.
+                                </p></li>
                         </ul>
+
+                        <p class="h5 fw-bold">Ejemplo</p>
+                        <p>Un empleado descontento de una ubicación remota intenta
+                            modificar la tabla de tasas de pago durante las operaciones
+                            normales. El sistema mantiene una pista de auditoría y los datos
+                            correctos se restauran en un día.</p>
+                        <div class="d-flex justify-content-center mb-5">
+                            <img src="assets/img/seguridad.png" class="img-fluid" alt="" >
+                        </div>
+
+                        <div>
+                        <P class="h5 fw-bold">Tácticas De Seguridad</P>
+                        
+                        <p class="">Se clasifican en:</p>
+
+                        <ul class="">
+                            <li class="fs-5 fw-bold lista_tacticas">Detectar: <p class="fs-6 fw-normal d-inline">En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> detectar intrusión, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> detectar la denegación del servicio, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">verificar la integridad del mensaje, </a> 
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> detectar el retraso del mensaje</a>.</p></li>
+
+
+                             <li class="fs-5 fw-bold lista_tacticas">Resistir los ataques: <p class="fs-6 fw-normal d-inline">En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> detectar identificar actores, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> autentificar actores, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">autorizar autores, </a> 
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">limitar el acceso, </a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">limitar la exposición, </a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none">cifrar datos, </a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> entidades separadas, </a>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> cambiar la configuración predeterminada</a>.</p></li>
+
+
+
+                                <li class="fs-5 fw-bold lista_tacticas">Reaccionar a los ataques: <p class="fs-6 fw-normal d-inline">En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> revocar el acceso, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> bloquear la computadora, </a>
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> informar a los actores</a>.</p></li>
+
+
+                                    
+                                <li class="fs-5 fw-bold lista_tacticas">Recuperar de los ataques: <p class="fs-6 fw-normal d-inline">En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> mantener un registro de auditoría, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> restauración de los servicios, </a>
+                                    tácticas de disponibilidad que se encargan de recuperarse
+                                    .</p></li>
+
+
+                          
+
+
+                        </ul>
+
+                        </div>
                     </div>
+<!-- ? Seguridad -->
 
 
+<!-- ?Usabilidad -->
                     <div class="tab-pane fade" id="nav-usabilidad" role="tabpanel" aria-labelledby="nav-usabilidad-tab">
-                        <ul>
-                            <li class="h5">Usabilidad: <span class="h6 ">Descubrir el servicio</span> </li>
-                            <li class="h5">Administrar interfaces:  <span class="h6 ">organizar, interfaz a medida</span> </li>
+                       
+                            <p class="h4  fw-bold">Escenario</p>
+                            <p>Un escenario general de usabilidad se puede describir con las siguientes partes:</p>
+    
+                            <ul class="list">
+                                <li class="fs-5 ">Fuente de estímulo: <p class="fs-6 text-muted d-inline">Es el usuario final puede ser un administrador o que tenga un rol especifico.</p></li>
+    
+                                <li class="fs-5 ">Estímulo: <p class="fs-6 text-muted d-inline">Es cuando el usuario final desea utilizar un sistema de manera eficiente, aprender a usarlo, minimizar el impacto de los errores, adaptar el sistema o configurar el sistema.</p></li>
+    
+                                <li class="fs-5 ">Artefacto: <p class="fs-6 text-muted d-inline">Es el sistema o la parte específica del sistema con el que el usuario está interactuando.
+                                    </p></li>
+    
+                                <li class="fs-5 ">Ambiente: <p class="fs-6 text-muted d-inline">Son las etapas en la cual se realiza la prueba (etapa de desarrollo y mantenimiento).</p></li>
+    
+                                <li class="fs-5 ">Respuesta: <p class="fs-6 text-muted d-inline">El sistema debe proporcionar al usuario las funciones necesarias o anticiparse a las necesidades del usuario.</p></li>
+    
+                                <li class="fs-5 ">Medición de la respuesta: <p class="fs-6 text-muted d-inline">Es el tiempo de la tarea, la cantidad de errores, la cantidad de tareas realizadas, la satisfacción del usuario, el conocimiento del usuario, la relación entre las operaciones exitosas y las operaciones totales, o la cantidad de tiempo o datos perdidos cuando se produce un error
+                                    </p></li>
+                            </ul>
+    
+                            <p class="h5 fw-bold">Ejemplo</p>
+                            <p>El usuario
+                                descarga una nueva aplicación y la está utilizando de manera
+                                productiva después de dos minutos de experimentación.</p>
+                            <div class="d-flex justify-content-center mb-5">
+                                <img src="assets/img/usabilidad.png" class="img-fluid" alt="" >
+                            </div>
+    
+                            <div>
+                            <P class="h5 fw-bold">Tácticas De Usabilidad</P>
+                            <p class="mb-0">El objetivo es aumentar la facilidad de uso cuando un usuario quiere realizar una tarea.</p>
+                            <p>Se clasifican en:</p>
+    
+                            <ul class="">
+                                <li class="fs-5 fw-bold lista_tacticas">Iniciativa de usuario de soporte: <p class="fs-6 fw-normal d-inline">Es cuando el sistema está en ejecución y se mejora al proporcionarle al usuario información sobre lo que está haciendo el sistema y al permitirle que responda de manera adecuada. En esta categoría se incluyen 
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> cancelar, deshacer, pausar / reanudar y agregar</a>.</p></li>
+    
+    
+                                 <li class="fs-5 fw-bold lista_tacticas">Iniciativa del sistema de apoyo: <p class="fs-6 fw-normal d-inline">soporte son aquellas que identifican los modelos que utiliza el sistema para predecir su propio comportamiento o la intención del usuario. En esta categoría se incluyen <a  data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none "> mantener el modelo de tarea, </a> <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> mantener modelo de usuario, </a> 
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link-success text-decoration-none"> Mantener el modelo del sistema</a>.</p></li>
+    
+                            </ul>
+    
+                            </div>
                            
-                        </ul>
+                        
                     </div>
+<!-- ?Usabilidad -->
+
 
                   </div>
 
